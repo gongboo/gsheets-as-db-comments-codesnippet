@@ -1,0 +1,54 @@
+<script>
+    var url = "PASTE_URL_HERE"
+    async function fetchData() {
+        let n = await fetch(url)
+        let response = await n.json()
+        console.log(response)
+        return response
+    }
+    async function updateComments() {
+        var commmentData = await fetchData();
+        var comments = document.getElementById("comments");
+        while (comments.firstChild) {
+            comments.firstChild.remove()
+        }
+
+        for (let i = 0; i < commmentData.data.length; i++) {
+            let p = document.createElement("p");
+            p.textContent = commmentData.data[i].comment;
+            console.log(commmentData.data[i].comment)
+            comments.appendChild(p);
+        }
+    }
+    updateComments();
+
+    function writeComment() {
+        var commentBox = document.getElementById("commentBox");
+
+        commentText = commentBox.value;
+        console.log(commentText)
+
+        fetch(url, {
+            redirect: "follow",
+            method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain'
+            },
+            body: JSON.stringify({ comment: commentText })
+        })
+            .then(response => response.text())
+            .then(text => console.log('Comment submitted', text))
+            .catch(error => console.error('Error:', error));
+        commentBox.value = "";
+        var comments = document.getElementById("comments");
+        let p = document.createElement("p");
+        p.textContent = commentText;
+        comments.appendChild(p);
+    }
+</script>
+
+<div id="comments">
+    loading...
+</div>
+<input id="commentBox" type="text"></input>
+<button onclick="writeComment()">send</button>
