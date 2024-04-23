@@ -20,7 +20,7 @@ Total triggers limit for Apps Script is 90 min per day. [apps script limits](htt
 ![https://blogger.googleusercontent.com/img/a/AVvXsEi-IwnMb9onpvPoM63Yaifvfw0-2bMM2tNAadnZF6VqMzqoHp1VbHuEQVBDKZqXAFWYBwWgi_hyIn-jgwPkUC9VHWPZVVYF2SZqWGDnljxfyCkHkOugwBCVJIf4biUoLykA32pTp4p8wvAbBwB78vAM380PnnkqcWdlgx5A5FYgYuDdwMRJBbIxzjAKDdiF=s16000](https://blogger.googleusercontent.com/img/a/AVvXsEi-IwnMb9onpvPoM63Yaifvfw0-2bMM2tNAadnZF6VqMzqoHp1VbHuEQVBDKZqXAFWYBwWgi_hyIn-jgwPkUC9VHWPZVVYF2SZqWGDnljxfyCkHkOugwBCVJIf4biUoLykA32pTp4p8wvAbBwB78vAM380PnnkqcWdlgx5A5FYgYuDdwMRJBbIxzjAKDdiF=s16000)
 
 2. **Get the Spreadsheet ID**:
-   - Locate the Spreadsheet ID in the URL after "/d/" and before "/edit".
+   - Get the Spreadsheet ID which is in the URL after "/d/" and before "/edit".
 
 ![https://blogger.googleusercontent.com/img/a/AVvXsEhgZz50nT1zrYEZSMiJmnyAbXZnte8CMcv2w_gZ6lOHWDkX4oV8xc8FwSSXip036RWqQaLW50-oXENv3ml3J1TDiyvHx5_4jhMKweeDjx40ZhldKKRuL6ns3PItq7KLgStW0km5bYdaeeAxnW4p0Vuy5HJcpPClMGOvLNwV4zCD9v_l84k1c3xmk4M5E7pt=s16000](https://blogger.googleusercontent.com/img/a/AVvXsEhgZz50nT1zrYEZSMiJmnyAbXZnte8CMcv2w_gZ6lOHWDkX4oV8xc8FwSSXip036RWqQaLW50-oXENv3ml3J1TDiyvHx5_4jhMKweeDjx40ZhldKKRuL6ns3PItq7KLgStW0km5bYdaeeAxnW4p0Vuy5HJcpPClMGOvLNwV4zCD9v_l84k1c3xmk4M5E7pt=s16000)
 
@@ -43,7 +43,7 @@ Paste the SpreadSheet ID in the `code.gs` in openById function.
 
 ![https://blogger.googleusercontent.com/img/a/AVvXsEheLTdQXI5DAMG8kQw7AKoiR3tRY5zqeok0r-Y-IiDQ3lzMmddX_cPgLobiuVbFzKWgh4iuQgIVocmM5jN1LYGIAZgHce6-S4g5kl_lVePgyuZSsItEydc_X_RizhvvUd5FF0zgshjG2fL08FPOlW1HLjUBQGnOKU8VqFVZrrXYvOk9jr16mUu9WC2-LGNr=s16000](https://blogger.googleusercontent.com/img/a/AVvXsEheLTdQXI5DAMG8kQw7AKoiR3tRY5zqeok0r-Y-IiDQ3lzMmddX_cPgLobiuVbFzKWgh4iuQgIVocmM5jN1LYGIAZgHce6-S4g5kl_lVePgyuZSsItEydc_X_RizhvvUd5FF0zgshjG2fL08FPOlW1HLjUBQGnOKU8VqFVZrrXYvOk9jr16mUu9WC2-LGNr=s16000)
 
-[https://blogger.googleusercontent.com/img/a/AVvXsEizRHs9YFPsy7IGfqoJtd4_QgPe0EjQ0FEMraqRq6eiJlQS97RXoWeANgaFTUIhYlV7MVtlw8w1jtQxl_1BTkbt3c-gqJcQ8VxZR17Zf2l--y-r9Eo4fc2JD8QDyzPtOD6mE3M5-wucwygt9gQH9XzKcwYQJBm5KCSOiDxNYOiV6nf8e-hMiSpx6HVpfU0v=s16000](https://blogger.googleusercontent.com/img/a/AVvXsEizRHs9YFPsy7IGfqoJtd4_QgPe0EjQ0FEMraqRq6eiJlQS97RXoWeANgaFTUIhYlV7MVtlw8w1jtQxl_1BTkbt3c-gqJcQ8VxZR17Zf2l--y-r9Eo4fc2JD8QDyzPtOD6mE3M5-wucwygt9gQH9XzKcwYQJBm5KCSOiDxNYOiV6nf8e-hMiSpx6HVpfU0v=s16000)
+![https://blogger.googleusercontent.com/img/a/AVvXsEizRHs9YFPsy7IGfqoJtd4_QgPe0EjQ0FEMraqRq6eiJlQS97RXoWeANgaFTUIhYlV7MVtlw8w1jtQxl_1BTkbt3c-gqJcQ8VxZR17Zf2l--y-r9Eo4fc2JD8QDyzPtOD6mE3M5-wucwygt9gQH9XzKcwYQJBm5KCSOiDxNYOiV6nf8e-hMiSpx6HVpfU0v=s16000](https://blogger.googleusercontent.com/img/a/AVvXsEizRHs9YFPsy7IGfqoJtd4_QgPe0EjQ0FEMraqRq6eiJlQS97RXoWeANgaFTUIhYlV7MVtlw8w1jtQxl_1BTkbt3c-gqJcQ8VxZR17Zf2l--y-r9Eo4fc2JD8QDyzPtOD6mE3M5-wucwygt9gQH9XzKcwYQJBm5KCSOiDxNYOiV6nf8e-hMiSpx6HVpfU0v=s16000)
 
 5. **Integrate into Your Project**:
    - Add the provided HTML snippet into your project to enable the comment feature.
