@@ -7,7 +7,8 @@ var output = [];
 function doGet() {
   for (let i = 0; i < value.length; i++) {
     var row = {};
-    row["comment"] = value[i][0];
+    row["name"] = value[i][0];
+    row["comment"] = value[i][1];
     output.push(row);
   }
   return ContentService.createTextOutput(
@@ -18,6 +19,8 @@ function doGet() {
 function doPost(e) {
   var jsonData = JSON.parse(e.postData.contents);
   var comment = jsonData.comment;
-  sheet.appendRow([comment]);
+  var name = jsonData.name;
+
+  sheet.appendRow([name, comment]);
   return ContentService.createTextOutput("Comment added");
 }

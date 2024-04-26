@@ -14,19 +14,33 @@
         }
 
         for (let i = 0; i < commmentData.data.length; i++) {
-            let p = document.createElement("p");
-            p.textContent = commmentData.data[i].comment;
+            let nameAndCommentDiv = document.createElement("div");
+            let name = document.createElement("div");
+            name.classList.add("nameBox")
+            let comment = document.createElement("pre");
+            comment.classList.add("commentBox")
+
+            comment.textContent = commmentData.data[i].comment;
+            name.textContent = commmentData.data[i].name;
+
+            nameAndCommentDiv.appendChild(name);
+            nameAndCommentDiv.appendChild(comment);
+            nameAndCommentDiv.appendChild(document.createElement("hr"));
+
             console.log(commmentData.data[i].comment)
-            comments.appendChild(p);
+            comments.appendChild(nameAndCommentDiv);
         }
     }
     updateComments();
 
     function writeComment() {
-        var commentBox = document.getElementById("commentBox");
+        let commentInputBox = document.getElementById("commentInputBox");
+        let commentText = commentInputBox.value;
+        // console.log(commentText)
 
-        commentText = commentBox.value;
-        console.log(commentText)
+        let nameInputBox = document.getElementById("nameInputBox");
+        let nameText = nameInputBox.value;
+
 
         fetch(url, {
             redirect: "follow",
@@ -34,21 +48,78 @@
             headers: {
                 'Content-Type': 'text/plain'
             },
-            body: JSON.stringify({ comment: commentText })
+            body: JSON.stringify({ name: nameText, comment: commentText })
         })
             .then(response => response.text())
             .then(text => console.log('Comment submitted', text))
             .catch(error => console.error('Error:', error));
-        commentBox.value = "";
+        commentInputBox.value = "";
+
         var comments = document.getElementById("comments");
-        let p = document.createElement("p");
-        p.textContent = commentText;
-        comments.appendChild(p);
+        let nameAndCommentDiv = document.createElement("div");
+        let name = document.createElement("div");
+        let comment = document.createElement("pre");
+        name.classList.add("nameBox")
+        comment.classList.add("commentBox")
+
+        comment.textContent = commentText;
+        name.textContent = nameText;
+
+        nameAndCommentDiv.appendChild(name);
+        nameAndCommentDiv.appendChild(comment);
+        nameAndCommentDiv.appendChild(document.createElement("hr"));
+
+        comments.appendChild(nameAndCommentDiv);
     }
 </script>
 
 <div id="comments">
     loading...
 </div>
-<input id="commentBox" type="text"></input>
-<button onclick="writeComment()">send</button>
+<div id="sendBox">
+    <form>
+        <input id="nameInputBox" type="text" placeholder="name" maxlength="20"></input>
+
+        <div>
+            <textarea id="commentInputBox" placeholder="comment" maxlength="100"></textarea>
+            <button id="sendButton" onclick="writeComment()">send</button>
+        </div>
+    </form>
+</div>
+
+<style>
+    #sendBox {
+        width: 500px;
+    }
+
+    .nameBox {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    .commentBox {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    #nameInputBox {
+        width: 50%;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    #commentInputBox {
+        height: 50px;
+        width: 100%;
+        resize: none;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    #sendButton {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+</style>
