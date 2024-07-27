@@ -1,6 +1,6 @@
 # Simple Comment Feature Using Google Sheets and Apps Script
 
-This is a simple implementation of a comment feature using Google Sheets and Google Apps Script as a DB. You can just follow the setting and add html code in your project!
+This is a simple implementation of a comment feature using Google Sheets and Google Apps Script as a DB. You can just follow the setting and add code in your project!
 
 ## key point
 
@@ -8,13 +8,13 @@ This is a simple implementation of a comment feature using Google Sheets and Goo
 
 Total triggers limit for Apps Script is 90 min per day. [apps script limits](https://developers.google.com/apps-script/guides/services/quotas)
 
-**Easy Integration:** Consists only of HTML, JavaScript, and CSS allowing easy addition to other projects.
+**Can be added in vanillaJS projects or React projects:** The interface can be added in vanillaJS projects or React projects
 
 **Cost-Effective:** Uses Google Apps Script's free tier.
 
 ## How to Set It Up
 
-1. **Create a Google Spreadsheet**:
+1. **Create a new Google Spreadsheet**:
    - Start by creating a new Google Spreadsheet, which will serve as the storage for comments.
 
 ![https://blogger.googleusercontent.com/img/a/AVvXsEi-IwnMb9onpvPoM63Yaifvfw0-2bMM2tNAadnZF6VqMzqoHp1VbHuEQVBDKZqXAFWYBwWgi_hyIn-jgwPkUC9VHWPZVVYF2SZqWGDnljxfyCkHkOugwBCVJIf4biUoLykA32pTp4p8wvAbBwB78vAM380PnnkqcWdlgx5A5FYgYuDdwMRJBbIxzjAKDdiF=s16000](https://blogger.googleusercontent.com/img/a/AVvXsEi-IwnMb9onpvPoM63Yaifvfw0-2bMM2tNAadnZF6VqMzqoHp1VbHuEQVBDKZqXAFWYBwWgi_hyIn-jgwPkUC9VHWPZVVYF2SZqWGDnljxfyCkHkOugwBCVJIf4biUoLykA32pTp4p8wvAbBwB78vAM380PnnkqcWdlgx5A5FYgYuDdwMRJBbIxzjAKDdiF=s16000)
@@ -52,4 +52,4 @@ Paste the SpreadSheet ID in the `code.gs` in openById function.
 
 Go to the Deploy > Manage Deployments and copy the URL. Paste it in the url variable in the comment.html.
 
-Finally, paste the total comment html in your web projects.
+Finally, paste the total comment code in your web projects.
